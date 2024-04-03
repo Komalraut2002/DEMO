@@ -1,0 +1,270 @@
+<div class="great">
+    <div class="image-slider">
+    <div class="slider-container" [style.transform]="'translateX(' + transform + ')'">
+      <div class="slide" *ngFor="let image of images; let i = index">
+        <div class="image-container">
+          <img [src]="image.url" alt="Slide" (mouseover)="showTitle(i)" (mouseout)="hideTitle(i)">
+          <div class="title-container" [ngClass]="{ 'active': showTitleIndex === i }">
+            <h1 class="title1">{{ image.title }}</h1>
+            <div class="slider-btn-area">
+                <a routerLink="menu" href="" class="ghost-btn">Order Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="prev-button" (click)="prevSlide()">&lt;</div>
+    <div class="next-button" (click)="nextSlide()">&gt;</div>
+    <div class="content">
+        <h1 class="mb-5">Fresh Cooked Food <br/> At Your Door.</h1>
+        <a  routerLink="menu">ORDER NOW <i class="bi bi-arrow-right"></i></a>
+    </div>
+  </div>
+
+  
+
+<!-- about -->
+<div class="about1-area section-space">
+    <div class="container">
+        <video autoplay muted loop id="bg-video">
+            <source src="../../assets/img/143100 (Original).mp4" type="video/mp4"> 
+        </video>
+        <div class="row">
+            <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12 wow fadeInLeft">
+                <a href="#"><img class="img-responsive" src="../../assets/img/chef/1.png" alt="chef"></a>
+            </div>
+            <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12 wow fadeInRight">
+                <div class="about1-area-top">
+                    <h2>Canadian <span>Pizza</span></h2>
+                    <h2>For Getting Real Taste</h2>
+                </div>
+                <h3 class="title-bar-big-left">Discover Our pizza & Sandwich</h3>
+                <p>We at Canadian Pizza would love to serve you yummy Pizza straight from our kitchen ready for you. We will fulfil you hunger needs and ensure that we leave you licking your fingers and asking for more yummy Pizza!
+                </p>
+                <a href="menu" class="ghost-color-btn">Order Now<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- <div class="container mt-5 mb-5">
+    <h1 class="text-center">How to get <span class="highlight">fresh food</span></h1>
+    <div class="row mt-5">
+        
+        <div class="col-lg-4 mt-2">
+            <div class="stepBox">
+                <h1>1</h1>
+                <p>select food</p>
+            </div>
+        </div>
+
+        <div class="col-lg-4 mt-2">
+            <div class="stepBox">
+                <h1>2</h1>
+                <p>fill the details</p>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 mt-2">
+            <div class="stepBox">
+                <h1>3</h1>
+                <p>your order delivered in minute</p>
+            </div>
+        </div>
+    </div>
+</div> 
+
+<div class="wrapper">
+<span class="span1" style="--i: 1">
+    <span class="bubble"></span>
+</span>
+<span class="span1" style="--i: 2">
+    <span class="bubble"></span>
+</span>
+<span class="span1" style="--i: 3">
+    <span class="bubble"></span>
+</span>
+<span class="span1" style="--i: 4">
+    <span class="bubble"></span>
+</span>
+<span class="span1" style="--i: 5">
+    <span class="bubble"></span>
+</span>
+<span class="span1" style="--i: 6">
+    <span class="bubble"></span>
+</span>
+<span class="span1" style="--i: 7">
+    <span class="bubble"></span>
+</span>
+<span class="span1" style="--i: 8">
+    <span class="bubble"></span>
+</span>
+<span class="span1" style="--i: 9">
+    <span class="bubble"></span>
+</span>
+<span class="span1" style="--i: 10">
+    <span class="bubble"></span>
+</span>
+</div>-->
+
+  
+
+<!-- foodbox  -->
+<div class="container mt-4 mb-4">
+    <div class="le">
+    <h1 class="text-center">Customers <span class="highlight">Favourites Food</span></h1>
+</div>
+    <div class="row">
+        <div class="col-lg-3 mt-3" *ngFor="let fd of foodData;index as i">
+            <div class="foodbox" *ngIf="i<=3">
+                <img src="{{fd.foodImg}}" />
+                <h1>{{fd.foodName}}</h1>
+                <p>{{fd.foodPrice | currency:'INR'}}</p>
+            </div>
+        </div>
+    </div>
+    <a routerLink="menu" class="viewmorebtn">view more <i class="bi bi-arrow-right"></i></a>
+</div>
+
+
+
+
+ <!-- Tasty Menu Area Start Here -->
+ <div class="tasty-menu-area">
+    <div class="container">
+        <div class="row">
+            <h2 class="title">BEST SELLER</h2>
+            <span class="subtitle">Canadian Pizza</span>
+            <div class="tasty-menu-inner">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
+                    <h3 class="inner-sub-title-center title-bar-full-width">Best Seller</h3>
+                    <ul class="menu-list">
+                        <li>
+                            <div class="media">
+                                <a class="pull-left">
+                                        <img src="../../assets/img/dish/2.png" alt="client" class="img-responsive">
+                                    </a>
+                                <div class="media-body">
+                                    <h4><a>paneer patty wrap</a></h4>
+                                    <p>Canadian Pizza</p>
+
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="media">
+                                <a class="pull-left">
+                                        <img src="../../assets/img/dish/3.png" alt="client" class="img-responsive">
+                                    </a>
+                                <div class="media-body">
+                                    <h4><a>paneer zingy</a></h4>
+                                    <p>Canadian Pizza </p>
+
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="media">
+                                <a class="pull-left">
+                                        <img src="../../assets/img/dish/4.png" alt="client" class="img-responsive">
+                                    </a>
+                                <div class="media-body">
+                                    <h4><a>Potato pops</a></h4>
+                                    <p>Canadian Pizza</p>
+
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="media">
+                                <a class="pull-left">
+                                        <img src="../../assets/img/dish/5.png" alt="client" class="img-responsive">
+                                    </a>
+                                <div class="media-body">
+                                    <h4><a>Shahi paneer pizza</a></h4>
+                                    <p>Canadian Pizza</p>
+
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
+                    <h3 class="inner-sub-title-center title-bar-full-width">Best Seller</h3>
+                    <ul class="menu-list">
+                        <li>
+                            <div class="media">
+                                <a class="pull-left">
+                                        <img src="../../assets/img/dish/6.png" alt="client" class="img-responsive">
+                                    </a>
+                                <div class="media-body">
+                                    <h4><a>stuffed garlic bread</a></h4>
+                                    <p>Canadian Pizza </p>
+
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="media">
+                                <a class="pull-left">
+                                        <img src="../../assets/img/dish/7.png" alt="client" class="img-responsive">
+                                    </a>
+                                <div class="media-body">
+                                    <h4><a>tangy paneer</a></h4>
+                                    <p>Canadian Pizza</p>
+
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="media">
+                                <a class="pull-left">
+                                        <img src="../../assets/img/dish/8.png" alt="client" class="img-responsive">
+                                    </a>
+                                <div class="media-body">
+                                    <h4><a>ultimate paneer pizza</a></h4>
+                                    <p>Canadian Pizza</p>
+
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="media">
+                                <a class="pull-left">
+                                        <img src="../../assets/img/dish/9.png" alt="client" class="img-responsive">
+                                    </a>
+                                <div class="media-body">
+                                    <h4><a>veggie stick</a></h4>
+                                    <p>Canadian Pizza</p>
+
+                                </div>
+                            </div>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Tasty Menu Area End Here -->
+
+<div class="box">
+    <video autoplay muted loop id="bg1-video">
+<source src="../../assets/img/173894 (Original).mp4" type="video/mp4"> 
+</video>
+    <div class="container1">
+        
+        <div class="wrapper1">
+            <img src="../../assets/img/recipe-of-the-day-banner2.jpg">
+            <img src="../../assets/img/recipe-of-the-day-banner5.jpg">
+            <img src="../../assets/img/recipe-of-the-day-banner4.jpg">
+            <img src="../../assets/img/recipe-of-the-day-banner3.jpg">
+
+        </div>
+    </div>
+</div>
+</div>

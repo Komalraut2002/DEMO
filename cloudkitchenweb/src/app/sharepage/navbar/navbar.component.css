@@ -1,0 +1,38 @@
+.navbar {
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value for desired transparency */
+    width: 100%;
+    position: -webkit-sticky; /* For Safari compatibility */
+    position: sticky; /* Keep the navigation bar sticky */
+    top: 0;
+    z-index: 1000;
+  }
+  
+
+  .nav-link {
+    font-weight: bold;
+    font-size: 25px; /* Increase the font size */
+    margin-right: 40px;
+    color: white;
+    transition: color 0.3s;
+  }
+  
+  /* Style the active navigation link differently */
+  .navbar-light .navbar-nav .nav-link.active-link {
+    color: var(--primary-color);
+    text-decoration: underline;
+    
+  }
+  
+  /* Position the logo on the left */
+  .logo-area {
+    top: 3%;
+    left: 10%;
+    position: absolute;
+  }
+
+  @media screen and (max-width: 768px){
+    .logo-area{
+        visibility: hidden;
+    }
+  }
+  

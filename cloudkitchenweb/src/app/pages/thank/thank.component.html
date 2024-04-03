@@ -1,0 +1,12 @@
+<div class="container">
+  <video autoplay muted loop id="bg1-video">
+    <source src="../../assets/img/motorcycle_-_88242 (720p).mp4" type="video/mp4"> 
+    </video>
+  <div class="popup" [ngClass]="{'open-popup': isPopupOpen}">
+    <img src="../../../assets/img/404-tick.png">
+    <h2>Thank You!</h2>
+    <p>Your order has been successfully placed. Thanks!</p>
+    <button type="button" (click)="closePopup()">OK</button>
+  </div>
+</div>
+

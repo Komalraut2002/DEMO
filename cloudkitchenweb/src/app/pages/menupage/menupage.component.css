@@ -1,0 +1,101 @@
+form
+{
+    margin-top: 10%;
+    width: 50%;
+}
+a.btn{
+    color: #ffffff;
+    background-color: #8bee5d;
+    margin-left: -25px;
+    margin-top: 20px;
+    letter-spacing: 4px;
+    width: 90px;
+}
+img 
+{
+    border-radius: 6px;
+    padding: 10px 20px;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    margin-top: -0px;
+}
+button{
+    color: blue;
+}
+@media screen and (max-width:600px) {
+    form 
+    {
+        width: 100%;
+    }
+}
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+.mt-3{
+    color: #ffffff;
+    margin-left: 30px;
+    border: 2px chartreuse double;
+
+}
+.container .row p{
+    color: #8bee5d;
+    margin-left: 32px;
+    font-size: 20px;
+    font: bold;
+}
+/* Add this CSS to style your form */
+.col-lg-6 {
+    padding: 20px;
+}
+
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    
+}
+
+textarea.form-control {
+    height: 120px;
+    
+}
+
+.btn {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #ff2e2e;
+}
+.al {
+    color: #ffffff; /* Text color */
+    outline: 2px solid #8bee5d; /* Outline with desired color and width */
+}
+@media screen and (max-width: 700px) {
+    .container{
+        background-color: black;
+    }
+    #bg-video {
+        position:relative;
+        margin-top: -50px;
+        margin-bottom: -55px;
+    }
+    form {
+        width: 100%;
+    }
+}

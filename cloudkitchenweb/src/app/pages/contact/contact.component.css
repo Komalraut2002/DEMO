@@ -1,0 +1,16 @@
+.con{
+    background: url("/../assets/img/slider/slide1-1.jpg");
+    padding: 30px 50px 50px 30px;
+    
+}
+.container{
+    background-color: rgba(0,0,0,0.5);
+}
+.container h1{
+    color: #ffffff;
+    text-decoration: underline #67a54c;
+}
+.btn{
+    background-color: #67a54c;
+    margin-left: 50%;
+}
